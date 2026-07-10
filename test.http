@@ -1,0 +1,26 @@
+@baseUrl = http://127.0.0.1:8000
+
+### Health check
+GET {{baseUrl}}/health
+
+### Ask a question - normal case
+POST {{baseUrl}}/ask
+Content-Type: application/json
+
+{
+  "question": "Which property has the highest cap rate?"
+}
+
+### Ask a question - empty question (expect 400)
+POST {{baseUrl}}/ask
+Content-Type: application/json
+
+{
+  "question": ""
+}
+
+### Ask a question - missing field (expect 422)
+POST {{baseUrl}}/ask
+Content-Type: application/json
+
+{}
