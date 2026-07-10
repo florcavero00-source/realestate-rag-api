@@ -1,0 +1,30 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug seed.py",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/seed.py",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "envFile": "${workspaceFolder}/.env",
+      "python": "${workspaceFolder}/venv/Scripts/python.exe",
+      "pythonArgs": ["-Xfrozen_modules=off"],
+      "justMyCode": true
+    },
+    {
+      "name": "Debug seed.py (pause on start)",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/seed.py",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "envFile": "${workspaceFolder}/.env",
+      "python": "${workspaceFolder}/venv/Scripts/python.exe",
+      "pythonArgs": ["-Xfrozen_modules=off"],
+      "stopOnEntry": true,
+      "justMyCode": true
+    }
+  ]
+}
